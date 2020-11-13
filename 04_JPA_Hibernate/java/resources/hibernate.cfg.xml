@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/hibernate_1</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">parola123!@#</property>
+
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Use XML-based mapping metadata -->
+        <!-- <mapping resource="domain/Message.hbm.xml"/> -->
+
+        <!-- Use Annotation-based mapping metadata -->
+<!--        <mapping class="org.example.classes.mapping.one_to_one.PostDetails"/>-->
+<!--        <mapping class="org.example.classes.mapping.one_to_one.Post"/>-->
+
+<!--        <mapping class="org.example.classes.mapping.one_to_many.Person"/>-->
+<!--        <mapping class="org.example.classes.mapping.one_to_many.Guide"/>-->
+
+<!--        <mapping class="org.example.classes.mapping.enums.Payment"/>-->
+
+    </session-factory>
+</hibernate-configuration>
